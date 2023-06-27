@@ -18,11 +18,12 @@ public class Orders {
     private Integer uid;
     private Integer sid;
     private Integer bid;
+    private Integer num;
     private Integer state;
     private double latitude;
     private double longitude;
     private Integer deleted;
-
     private Book book;
     private Store store;
+    private Picture picture;
 }

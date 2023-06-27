@@ -88,11 +88,11 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public R save(OrdersDto ordersDto) {
-      Orders orders=new Orders();
-      orders.setOid(ordersDto.getOid());
-      orders.setState(ordersDto.getState());
-      orders.setLatitude(ordersDto.getLatitude());
-      orders.setLongitude(ordersDto.getLongitude());
+        Orders orders=new Orders();
+        orders.setOid(ordersDto.getOid());
+        orders.setState(ordersDto.getState());
+        orders.setLatitude(ordersDto.getLatitude());
+        orders.setLongitude(ordersDto.getLongitude());
         int rows=orderMapper.updateById(orders);
 
         if (rows == 0){
@@ -123,6 +123,33 @@ public class OrderServiceImpl implements OrderService {
         return R.OK("删除成功！！！");
     }
 
+    /**
+     * 查看全部订单
+     *
+     * @param cartDto
+     * @return
+     */
+    @Override
+    public R zong(CartDto cartDto) {
+        if (cartDto.getUid() != null) {
+            List<Orders> orders = orderMapper.querylistzong(cartDto);
+            return R.OK("成功", orders);
 
+        } else {
 
+            return R.OK("请先登录！！！");
+        }
+    }
+
+    /**
+     * 商家订单
+     *
+     * @param sid
+     * @return
+     */
+    @Override
+    public R shangjia(int sid) {
+        List<Orders> orders = orderMapper.querylistshangjia(sid);
+        return R.OK("成功", orders);
+    }
 }

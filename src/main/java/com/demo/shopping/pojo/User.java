@@ -18,7 +18,7 @@ private Integer uid;
 private String imgsrc;
 private String name;
 private String phone;
-private Integer password;
+private String password;
 private String address;
 private int type;
 

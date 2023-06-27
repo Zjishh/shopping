@@ -1,6 +1,10 @@
 package com.demo.shopping.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * projectName: health
@@ -11,16 +15,16 @@ import lombok.Data;
  */
 @Data
 public class Book {
-    private String img;
+    @TableId(type = IdType.AUTO)
     private Integer bid;
     private Integer sid;
-    private Integer pid;
     private String bname;
     private double price;
-    private  Integer fare;
+    private double fare;
     private String title;
     private String genre;
+    private Integer deleted;
 
-
-
+    private Store store;
+    private List<Picture> pictures;
 }
