@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 @RequestMapping("/picture")
 public class PictureController {
-/**
- * projectName: shopping
- * @author: 肖学桐
- * time: 2021/11/6 17:17
- * description:
- */
+
 @Autowired
     private PictureService pictureService;
 @GetMapping("list")

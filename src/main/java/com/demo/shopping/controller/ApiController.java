@@ -8,13 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 
-/**
- * projectName: health
- *
- * @author: 王正国
- * time: 2021/11/5 17:45
- * description:
- */
+
 @RestController
 @RequestMapping("/api")
 public class ApiController {
@@ -25,7 +19,7 @@ public class ApiController {
         // 构建上传目录路径
         String uploadPath = System.getProperty("user.dir")+"/src/main/resources/static/images";
         String uploadPath2 = System.getProperty("user.dir")+"/target/classes/static/images";
-        // 如果目录不存在就创建666
+        // 如果目录不存在就创建
         File uploadDir = new File(uploadPath);
         if (!uploadDir.exists()) {
             uploadDir.mkdir();

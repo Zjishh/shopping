@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 @RequestMapping("/book")
 public class BookController {
-/**
- * projectName: shopping
- * @author: 肖学桐
- * time: 2021/11/4 9:48
- * description:
- */
+
 @Autowired
     private BookService bookService;
 @GetMapping("list")

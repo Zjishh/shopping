@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 @RequestMapping("/user")
 public class UserController {
-    /**
-     * projectName: shopping
-     * @author: 肖学桐
-     * time: 2021/11/3 15:29
-     * description:
-     */
+
     @Autowired
     private UserService userService;
     @PostMapping("login")

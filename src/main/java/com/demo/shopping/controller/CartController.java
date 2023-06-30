@@ -9,13 +9,7 @@ import com.demo.shopping.vo.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * projectName: health
- *
- * @author: 杨玉斌
- * time: 2021/11/4 13:38
- * description:购物车接口
- */
+
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/cart")

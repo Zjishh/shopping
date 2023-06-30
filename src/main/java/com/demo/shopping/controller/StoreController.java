@@ -9,13 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * projectName: health
- *
- * @author: 贾瑞超
- * time: 2021/11/9 13:50
- * description:
- */
+
 
 @RestController
 @CrossOrigin("*")
